@@ -1,0 +1,55 @@
+.countries-page {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.countries-header {
+  margin-bottom: 1rem;
+}
+
+.countries-header-text {
+  min-width: 0;
+}
+
+.countries-header-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.65rem;
+}
+
+.countries-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.countries-header p {
+  margin-top: 0.4rem;
+  color: var(--text-secondary);
+}
+
+.result-count-desktop {
+  display: none;
+  margin: 0.75rem 0 1rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+  .countries-page {
+    padding: 1.5rem;
+  }
+
+  .result-count-desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 1920px) {
+  .countries-page {
+    padding: 2rem;
+  }
+}
