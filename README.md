@@ -1,6 +1,6 @@
 # Countries Explorer
 
-## Live demo link
+**Live demo link**
 
 [https://countries-explorer-eight-eta.vercel.app/ ](https://countries-explorer-eight-eta.vercel.app/)
 
