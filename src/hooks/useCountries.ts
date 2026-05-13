@@ -36,6 +36,7 @@ export const useCountries = (
   );
 
   useEffect(() => {
+    // Increment the fetch generation
     const myGeneration = ++fetchGenerationRef.current;
     const toggledAsianOnly = prevAsianOnlyRef.current !== asianOnly;
     prevAsianOnlyRef.current = asianOnly;

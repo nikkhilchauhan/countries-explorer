@@ -14,13 +14,16 @@ const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [asianOnly, setAsianOnly] = useState<boolean>(false);
 
+  // Fetch the countries from the API
   const { countries, isLoading, errorMessage } = useCountries(
     searchTerm,
     asianOnly,
   );
 
+  // Memoize the countries length to avoid unnecessary re-renders
   const hasCountries = useMemo(() => countries.length > 0, [countries.length]);
 
+  // Determine if the search is filtering by search term or Asian only
   const isFiltering = searchTerm.trim().length > 0 || asianOnly;
 
   const resultCount =

@@ -4,6 +4,7 @@ export const useDebouncedValue = <T>(value: T, delayMs: number): T => {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
   const mountedRef = useRef(true);
 
+  // Set the mounted ref to true on mount and false on unmount
   useEffect(() => {
     mountedRef.current = true;
     return () => {
@@ -11,10 +12,10 @@ export const useDebouncedValue = <T>(value: T, delayMs: number): T => {
     };
   }, []);
 
+  // Set the debounced value after the delay
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       if (mountedRef.current) {
-        // ✅ guard setState
         setDebouncedValue(value);
       }
     }, delayMs);
