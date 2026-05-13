@@ -1,4 +1,4 @@
-import './Homepage.css';
+import './HomePage.css';
 import { useMemo, useState } from 'react';
 import { useCountries } from './hooks/useCountries';
 import {
