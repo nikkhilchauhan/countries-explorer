@@ -64,7 +64,7 @@ const HomePage = () => {
       {!errorMessage && isLoading ? <CountryGridSkeleton /> : null}
 
       {!errorMessage && !isLoading && !hasCountries ? (
-        <EmptyState message="No countries found matching your search criteria!" />
+        <EmptyState message="No countries found." />
       ) : null}
 
       {!errorMessage && !isLoading && hasCountries ? (

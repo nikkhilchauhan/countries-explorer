@@ -1,11 +1,11 @@
-import { memo } from 'react'
-import { formatPopulation } from '../helpers/formatters'
-import type { Country } from '../types/country'
-import './CountryCard.css'
+import { memo } from 'react';
+import { formatPopulation } from '../helpers/formatters';
+import type { Country } from '../types/country';
+import './CountryCard.css';
 
 type CountryCardProps = {
-  country: Country
-}
+  country: Country;
+};
 
 export const CountryCard = memo(({ country }: CountryCardProps) => {
   return (
@@ -35,7 +35,7 @@ export const CountryCard = memo(({ country }: CountryCardProps) => {
         <strong>Languages:</strong> {country.languages}
       </p>
     </article>
-  )
-})
+  );
+});
 
-CountryCard.displayName = 'CountryCard'
+CountryCard.displayName = 'CountryCard';
