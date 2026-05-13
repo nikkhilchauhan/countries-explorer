@@ -1,6 +1,6 @@
+import './Homepage.css';
 import { useMemo, useState } from 'react';
-import { useCountries } from '../hooks/useCountries';
-import './CountriesView.css';
+import { useCountries } from './hooks/useCountries';
 import {
   ErrorState,
   EmptyState,
@@ -8,9 +8,9 @@ import {
   CountryGrid,
   SearchControls,
   CountryGridSkeleton,
-} from './index';
+} from './components/index';
 
-const CountriesView = () => {
+const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [asianOnly, setAsianOnly] = useState<boolean>(false);
 
@@ -71,4 +71,4 @@ const CountriesView = () => {
   );
 };
 
-export default CountriesView;
+export default HomePage;

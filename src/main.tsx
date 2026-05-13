@@ -1,13 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { applyTheme, getStoredTheme } from './theme'
+import './main.css';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { lazy, Suspense } from 'react';
+const HomePage = lazy(async () => import('./HomePage'));
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { CountriesPageSkeleton } from './components/CountriesPageSkeleton';
+import { applyTheme, getStoredTheme } from './theme';
 
-applyTheme(getStoredTheme())
+applyTheme(getStoredTheme());
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <Suspense fallback={<CountriesPageSkeleton />}>
+        <HomePage />
+      </Suspense>
+    </ErrorBoundary>
   </StrictMode>,
-)
+);

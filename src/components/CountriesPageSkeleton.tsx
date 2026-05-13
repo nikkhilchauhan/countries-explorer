@@ -1,7 +1,7 @@
+import '../HomePage.css';
+import './CountriesPageSkeleton.css';
 import { ThemeToggle } from './ThemeToggle';
 import { CountryGridSkeleton } from './CountryGridSkeleton';
-import './CountriesView.css';
-import './CountriesPageSkeleton.css';
 
 export function CountriesPageSkeleton() {
   return (
