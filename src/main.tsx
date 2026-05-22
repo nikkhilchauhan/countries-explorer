@@ -2,6 +2,7 @@ import './main.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { lazy, Suspense } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 const HomePage = lazy(async () => import('./HomePage'));
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { CountriesPageSkeleton } from './components/CountriesPageSkeleton';
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')!).render(
         <HomePage />
       </Suspense>
     </ErrorBoundary>
+    <Analytics />
   </StrictMode>,
 );
